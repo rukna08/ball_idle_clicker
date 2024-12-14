@@ -6,12 +6,10 @@ public class HighScore : MonoBehaviour {
     TMP_Text high_score_text;
     public GameObject score;
     Score score_script;
-    int high_score_count;
+    public int high_score_count;
 
     void Start() {
-        // load high_score_count thru serialisation
-        // right now setting to 10
-        high_score_count = 10;
+        high_score_count = PlayerPrefs.GetInt("HighScoreCount", 5);
         high_score_text = GetComponent<TMP_Text>();
         score_script = score.GetComponent<Score>();
     }
