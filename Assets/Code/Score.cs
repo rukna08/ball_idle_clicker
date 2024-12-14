@@ -4,7 +4,7 @@ using TMPro;
 public class Score : MonoBehaviour {
 
     TMP_Text score_text;
-    int score_count;
+    public int score_count;
 
     void Start() {
         score_count = 0;
