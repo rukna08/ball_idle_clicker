@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game_over_sfx: {fileID: 8300000, guid: 21b762d42ca84b343aebbcf8f8790e0a, type: 3}
+  high_score: {fileID: 1760591515}
 --- !u!1 &1421660567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1586677061}
+  high_score_count: 0
 --- !u!1 &1853351704
 GameObject:
   m_ObjectHideFlags: 0
