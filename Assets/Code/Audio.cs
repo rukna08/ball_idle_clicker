@@ -7,6 +7,8 @@ public class Audio : MonoBehaviour {
 
     void Start() {
         AudioSource.PlayClipAtPoint(background_sfx, transform.position);
+        GameObject background_one_shot_audio = GameObject.Find("One shot audio");
+        background_one_shot_audio.GetComponent<AudioSource>().loop = true;
     }
 
     void Update() {
