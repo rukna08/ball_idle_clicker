@@ -9,7 +9,7 @@ public class HighScore : MonoBehaviour {
     public int high_score_count;
 
     void Start() {
-        high_score_count = PlayerPrefs.GetInt("HighScoreCount", 5);
+        high_score_count = PlayerPrefs.GetInt("HighScoreCount", 0);
         high_score_text = GetComponent<TMP_Text>();
         score_script = score.GetComponent<Score>();
     }
