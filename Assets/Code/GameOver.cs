@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour {
         AudioSource.PlayClipAtPoint(game_over_sfx, transform.position);
         PlayerPrefs.SetInt("HighScoreCount", high_score.GetComponent<HighScore>().high_score_count);
         PlayerPrefs.Save();
+        Camera.main.backgroundColor = Color.red;
         StartCoroutine(WaitForAudioToEnd());
     }
 
