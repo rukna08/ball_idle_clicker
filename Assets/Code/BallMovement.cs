@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BallMovement : MonoBehaviour {
     Rigidbody2D rigid_body;
@@ -10,8 +11,10 @@ public class BallMovement : MonoBehaviour {
     }
     
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
-            rigid_body.AddForce(Vector2.up * jump_speed);            
+        // EventSystem.current.IsPointerOverGameObject() checks
+        // if the mouse pointer is over an UI element or not.
+        if (!EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0) && Time.timeScale == 1f) {
+            rigid_body.AddForce(Vector2.up * jump_speed);        
             int direction = Random.Range(0, 2);
             if(direction == 0) { 
                 rigid_body.AddForce(Vector2.left * 10f);

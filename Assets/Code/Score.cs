@@ -12,7 +12,7 @@ public class Score : MonoBehaviour {
     }
 
     void Update() {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && Time.timeScale == 1f) {
             score_count++;
             score_text.text = score_count.ToString();
         }
