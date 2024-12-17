@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Audio : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class Audio : MonoBehaviour {
     }
 
     void Update() {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId) && Input.GetMouseButtonDown(0)) {
             AudioSource.PlayClipAtPoint(click_sfx, transform.position);
         }
     }
